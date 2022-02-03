@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://Mmalik31:B@n@ne31770@localhost:3306/portfolio"
+}
+
+model Project {
+  id         Int          @id @default(autoincrement())
+  name       String       @db.VarChar(255)
+  year       Int
+  details    String       @db.LongText
+  image      Json
+  link       String       @db.VarChar(255)
+  
+
+}
+
+model Competence {
+  id          Int       @id @default(autoincrement())
+  technologie String    @db.VarChar(255)
+  skills      String    @db.VarChar(255)
+ 
+}
